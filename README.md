@@ -1,13 +1,12 @@
 # Frontier-demo
 
-利用
+本專案為展示用的 demo site, 利用以下技術完成單一頁面，具有分頁、切換顯示模式、跳出燈箱等基礎功能。
 
 -   Vue CLI
 -   Vue 3 Composition API
 -   TailwindCSS
     -   雖然使用 TailwindCSS 但沒有使用預先刻畫好的元件，全部都以客製化為基礎去製作最基礎的 UI 介面。
 -   Axios
-    等技術完成的單一頁面，具有分頁、切換顯示模式、跳出燈箱等基礎功能。
 
 ## 下載並在本地端運行
 
@@ -17,3 +16,9 @@
 
     cd frontier/demo
     npm install
+
+### 2. 進行本地端運行
+
+    npm install
+
+### 3. 依據建議的 url 進行本地端的運行
