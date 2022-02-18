@@ -23,6 +23,8 @@
 
 ### 3. 依據建議的 url 進行本地端的運行
 
+    npm run serve
+
 ## 執行專案遇到的問題與方法
 
 1. 使用 Composition API 要非常注意資料的傳遞是否為 Impl 的物件包覆著 value，以及取用資料時要記得用 `propsname.value` 取得，
