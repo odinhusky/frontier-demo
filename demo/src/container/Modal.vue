@@ -1,7 +1,7 @@
 <template>
   <div class="w-full absolute top-0 left-0">
     <div class="modal-container">
-      <div class="modal-mask"></div>
+      <div class="modal-mask" @click="handleCloseModal()"></div>
 
       <div class="modal">
         <button class="close-btn" @click="handleCloseModal()">
@@ -38,16 +38,13 @@ export default {
   },
   setup(props, { emit }) {
 
-    const { profileItem: profile } = props
-
-    console.log('profile', profile)
 
     const handleCloseModal = () => {
       emit('closeModal')
     }
 
     return {
-      profile,
+      profile: props.profileItem,
       handleCloseModal
     }
   }
@@ -60,7 +57,7 @@ export default {
   }
 
   .modal-mask {
-    @apply w-screen h-screen absolute top-0 left-0 bg-gray-600 opacity-50;
+    @apply w-screen h-screen absolute top-0 left-0 bg-gray-600 opacity-50 cursor-pointer;
     z-index: 52;
   }
 
@@ -73,7 +70,7 @@ export default {
   }
 
   .close-btn {
-    @apply absolute right-5 top-5;
+    @apply absolute right-5 top-5 cursor-pointer;
   }
 
   .modal-body {

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, toRefs } from 'vue'
 
 import PageBtn from '../components/PageBtn.vue'
 
@@ -31,8 +31,8 @@ export default {
   components: {
     PageBtn
   },
-  setup({ pageObj }, { emit }) {
-    const { hasPrev, hasNext, currentPage } = pageObj
+  setup(props, { emit }) {
+    const { hasPrev, hasNext, currentPage } = toRefs(props).pageObj.value
 
     // # data & computed
     const unCenterFrontJudge = computed(() => currentPage.value <= 3);
